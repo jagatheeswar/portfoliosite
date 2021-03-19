@@ -1,0 +1,88 @@
+.curvedbg {
+    margin: -800px auto 0;
+    width: 1000px;
+    height: 800px;
+    overflow: hidden;
+    border-radius: 0 0 70% 70%;
+    background-color: #0080C1;
+  }
+  .curvedbgs{
+    margin: -480px 0px 20px 0px;
+    width: 1000px;
+    height: 1000px;
+    overflow: hidden;
+    border-radius: 20% 30% 0% 80%;
+    background-color:yellow;
+  }
+
+
+.NavBar{
+    height: 100vh;
+    .nav{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        .profile{
+            width: 100%;
+            text-align: center;
+            margin-top: 1rem;
+            border-bottom: 1px solid #2e344e;
+            img{
+                width: 70%;
+                border-radius: 100%;
+                border: 5px solid #2e344e;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .nav-items{
+            width: 100%;
+            .nav-item{
+                list-style: none;
+                text-align: center;
+                a{
+                    text-decoration: none;
+                    font-size: inherit;
+                    color: rgb(0, 255, 21) ;
+                    display: block;
+                    padding: .5rem 0;
+                    position: relative;
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: .4rem;
+                        height: 100%;
+                        background-color:rgba(18, 64, 216, 0.6);
+                        transform-origin: bottom;
+                        transform: scale(0);
+                        overflow-x: hidden;
+                        transition: transform .6s, .2s width .5s cubic-bezier(1,-0.16,.6,1.35);
+                    }
+
+                    &:hover::before{
+                        width: 100%;
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+
+        .footer{
+            width: 100%;
+            border-top: 1px solid #2e344e;
+            p{
+                text-align: center;
+                padding: 1rem 0;
+            }
+        }
+    }
+}
+
+.active{
+    background-color:rgba(98, 0, 255, 0.6)
+}
